@@ -9,18 +9,23 @@
     "echo": "echo $FOO",
     "preecho2": "./export.sh",
     "echo2": "echo $FAA",
-    "start": "better-npm-run foo:baz",
+    "echo3": "npm-run-all setenv echo2",
+    "start": "better-npm-run foo:baz ; better-npm-run  rrr",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "betterScripts":{
-    "foo:baz":{
+  "betterScripts": {
+    "foo:baz": {
       "command": "echo foo"
+    },
+    "rrr": {
+      "command": "echo rrr"
     }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "better-npm-run": "0.0.8"
+    "better-npm-run": "0.0.8",
+    "npm-run-all": "^1.6.0"
   }
 }
